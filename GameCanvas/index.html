@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <canvas id="meu_canvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      window.onload = function() {
+
+        //Canvas e Contexto
+        var canvas = document.getElementById('meu_canvas');
+        var context = canvas.getContext('2d');
+
+        //Inicia o desenho (apagas os anteriores)
+        context.beginPath();
+
+        //Desenha uma estrela
+        context.moveTo(75, 250);//Ponto Inicial
+        context.lineTo(150, 50);
+        context.lineTo(225, 250);
+        context.lineTo(50, 120);
+        context.lineTo(250, 120);
+        context.lineTo(75, 250);
+
+        context.lineWidth = 2;
+        context.strokeStyle = 'red';
+
+        context.stroke();
+      }
+    </script>
+  </body>
+</html>
